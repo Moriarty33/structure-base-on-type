@@ -20,6 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "e2e:run": "cypress run --browser chrome --headed",
+    "e2e:ci": " start-server-and-test http://localhost:3000 e2e:run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^12.2.0"
+    "cypress": "^12.2.0",
+    "start-server-and-test": "^1.15.2"
   }
 }

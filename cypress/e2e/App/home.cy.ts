@@ -1,3 +1,5 @@
+import { testId } from "../../support/selectors";
+
 describe('App', () => {
   it('should link text exists', () => {
     cy.visit('/')
@@ -9,8 +11,8 @@ describe('App', () => {
 
     cy.login();
 
-    cy.get('[data-testid="email"]').should('not.exist');
-    cy.get('[data-testid="password"]').should('not.exist');
-    cy.get('[data-testid="submit"]').should('not.exist');
+    cy.get(testId("email")).should('not.exist');
+    cy.get(testId("password")).should('not.exist');
+    cy.get(testId("submit")).should('not.exist');
   })
 })
